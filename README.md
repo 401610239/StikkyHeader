@@ -1,16 +1,16 @@
 StikkyHeader
 ============
 
-This is a very simple library for Android that allows you to stick an header to a ListView and easly apply animation to it
+This is a very simple library for Android that allows you to stick an header to a ListView and easily apply animation to it
 
-## Using
+## Usage
 
 To use the StikkyHeader library, you just need 3 lines:
 
 ```java
   StikkyHeaderBuilder.stickTo(mListView)
     .setHeader(R.id.header, containerLayout)
-    .minHeightHeaderPixel(250)
+    .minHeightHeader(250)
     .build();
 ```
 that's all, folks! 
@@ -48,19 +48,45 @@ and then set the animator to the StikkyHeader:
 ```java
   StikkyHeaderBuilder.stickTo(mListView)
     .setHeader(R.id.header, containerLayout)
-    .minHeightHeaderPixel(250)
+    .minHeightHeader(250)
     .animator(new IconAnimator())
     .build();
 ```
 
-## ViewGroup supported
+## ViewGroups supported
 
 The StikkyHeader supports:
 - ListView
 - RecyclerView
 - ScrollView
 
+## How to integrate
+
+Grab via Gradle:
+```groovy
+repositories {
+  maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+}
+dependencies {
+  compile 'com.github.carlonzo.stikkyheader:core:0.0.2-SNAPSHOT'
+}
+```
+
+or via Maven:
+```xml
+<dependency>
+  <groupId>com.github.carlonzo.stikkyheader</groupId>
+  <artifactId>core</artifactId>
+  <version>0.0.2-SNAPSHOT</version>
+</dependency>
+```
+
 ## Video
 
 ![Example 1](https://raw.githubusercontent.com/carlonzo/StikkyHeader/develop/readme/example1.gif)
 ![Example 2](https://raw.githubusercontent.com/carlonzo/StikkyHeader/develop/readme/example2.gif)
+
+## Demo
+
+here the [link][1] to the emulator to try few examples.
+[1]: https://appetize.io/embed/urptay0fdprc9dp3xzk6e41g70?screenOnly=false&scale=75
